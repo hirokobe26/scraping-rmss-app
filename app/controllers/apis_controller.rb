@@ -7,7 +7,6 @@ class ApisController < ApplicationController
     elements = page.search('div.p-faq')
 
     count = 0
-
     arrays = elements.to_s.split
 
     arrays.each do |element|
@@ -16,8 +15,8 @@ class ApisController < ApplicationController
         end
     end
 
-    human = {wrong_word: search_word, number_of_words: count}
-    render :json => human
+    search_words = {wrong_word: search_word, number_of_words: count}
+    render :json => search_words
   end
   
   private
