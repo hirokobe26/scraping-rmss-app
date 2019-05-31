@@ -21,6 +21,6 @@ class ApisController < ApplicationController
   
   private
   def get_url
-    url = 'https://service.rms.rakuten.co.jp/product/0008-0015/1/'
+    url = 'https://service.rms.rakuten.co.jp/product/' + params[:url]
   end
 end
